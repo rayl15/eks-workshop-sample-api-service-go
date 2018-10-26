@@ -20,6 +20,8 @@ kind: Deployment
 metadata:
   name: hello-k8s
   namespace: default
+  annotations:
+        prometheus.io/scrape: 'true'
 spec:
   replicas: 2
   strategy:
@@ -44,6 +46,20 @@ spec:
             allowPrivilegeEscalation: false
           ports:
             - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 1
+            periodSeconds: 2
+            failureThreshold: 1
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 1
+            periodSeconds: 3
+            failureThreshold: 2  
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
