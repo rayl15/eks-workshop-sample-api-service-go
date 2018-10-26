@@ -100,7 +100,7 @@ spec:
     kind: Deployment
     name: hello-k8s
   minReplicas: 2
-  maxReplicas: 10
+  maxReplicas: 100
   metrics:
   - type: Resource
     resource:
