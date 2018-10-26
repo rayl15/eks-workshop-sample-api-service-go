@@ -53,6 +53,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/tags: Environment=dev
+    alb.ingress.kubernetes.io/subnets: subnet-0b9bb49bc9bb0ac1d,subnet-0c98609dd3c366a53,subnet-04704c14aac4c1bf2
 spec:
   rules:
     - host: urbandev.sourcefuse.com
