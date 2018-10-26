@@ -59,7 +59,14 @@ spec:
               port: 8080
             initialDelaySeconds: 1
             periodSeconds: 3
-            failureThreshold: 2  
+            failureThreshold: 2
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "1m"
+          limits:
+            memory: "256Mi"
+            cpu: "100m"  
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
