@@ -78,6 +78,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/tags: Environment=dev
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:341707006720:certificate/7dd7319f-7cb9-4965-93c7-3d9c7b1d00a2
     alb.ingress.kubernetes.io/subnets: subnet-0d58ee1687f7eb911,subnet-0f3ff4b4c68f5e66f,subnet-0c2e8656722eda93e
 spec:
   rules:
