@@ -30,7 +30,8 @@ spec:
     spec:
       containers:
         - name: hello-k8s
-          image:  '${ trigger.properties[''IMAGE_NAME'']}'
+          #image:  '${ trigger.properties[''IMAGE_NAME'']}'
+          image:  '${ parameters.IMAGE_NAME }'
           securityContext:
             privileged: false
             readOnlyRootFilesystem: true
