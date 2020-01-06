@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: hello-k8s
 spec:
-  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080
