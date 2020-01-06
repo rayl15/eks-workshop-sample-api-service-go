@@ -31,7 +31,7 @@ spec:
       containers:
         - name: hello-k8s
           #image:  '${ trigger.properties[''IMAGE_NAME'']}'
-          image:  '${ parameters.IMAGE_NAME }'
+          image: nginx:latest
           securityContext:
             privileged: false
             readOnlyRootFilesystem: true
